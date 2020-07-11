@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Will your server be HACKED?</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="x1" placeholder="X1" required="required" />
+        <input type="text" name="x2" placeholder="X2" required="required" />
+		<input type="text" name="x3" placeholder="X3" required="required" />
+        <input type="text" name="x4" placeholder="X4" required="required" />
+        <input type="text" name="x5" placeholder="X5" required="required" />
+		<input type="text" name="x6" placeholder="X6" required="required" />
+        <input type="text" name="x7" placeholder="X7" required="required" />
+        <input type="text" name="x8" placeholder="X8" required="required" />
+		<input type="text" name="x9" placeholder="X9" required="required" />
+        <input type="text" name="x10" placeholder="X10" required="required" />
+        <input type="text" name="x11" placeholder="X11" required="required" />
+		<input type="text" name="x12" placeholder="X12" required="required" />
+        <input type="text" name="x13" placeholder="X13" required="required" />
+        <input type="text" name="x14" placeholder="X14" required="required" />
+		<input type="text" name="x15" placeholder="X15" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
